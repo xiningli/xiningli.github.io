@@ -44,37 +44,44 @@
     </div>
   </section>
 
-  <!-- ── The mirror: draw, shatter, step through ──────── -->
+  <!-- ── The mirror: draw, imagine, step through ──────── -->
   <section class="live" id="live">
     <div class="mirror-head reveal">
       <p class="eyebrow">A world on the other side</p>
       <h2>Every line, a doorway.</h2>
-      <p class="mirror-lede">Draw a few lines. Then break the mirror.</p>
+      <p class="mirror-lede">Draw a few lines. Let AI imagine a world.<br>Then break the mirror along your sketch and step inside.</p>
+      <div class="mirror-steps" aria-label="Your journey">
+        <span class="mirror-step active" data-step="draw"><b>01</b> Draw</span><i></i>
+        <span class="mirror-step" data-step="imagine"><b>02</b> Imagine</span><i></i>
+        <span class="mirror-step" data-step="inside"><b>03</b> Step inside</span>
+      </div>
     </div>
     <div class="mirror-panel reveal">
       <div class="mirror-stage" id="mirror-stage">
-        <img class="mirror-world" id="mirror-world" alt="The moonlit world revealed behind the broken mirror" draggable="false">
+        <img class="mirror-world" id="mirror-world" alt="The world imagined from your sketch, revealed behind the broken mirror" draggable="false">
         <canvas id="mirror-gl" aria-hidden="true"></canvas>
         <canvas id="mirror-draw" aria-label="Sketch canvas. Draw with a mouse, pen, or finger." tabindex="0"></canvas>
-        <div class="mirror-hint" id="mirror-hint"><span>Draw your first line here</span><small>A line, a curve — anything can open a door.</small></div>
+        <div class="mirror-hint" id="mirror-hint"><span>Draw your first line here</span><small>A line, a curve — anything can begin a world.</small></div>
         <div class="mirror-overlay" id="mirror-overlay" hidden>
           <div class="mirror-card">
             <p class="status"><span class="status-dot" id="status-dot"></span><span id="status-text">checking…</span></p>
             <p class="mirror-card-line">The digital human lives beyond the mirror.</p>
-            <a class="btn btn-primary" href="https://xiningli.ca">Start a conversation&nbsp;↗</a>
+            <a class="btn btn-primary" href="https://xiningli.ca">Step inside&nbsp;↗</a>
             <p class="live-sub">Voice &amp; motion pipelines are
             <a href="https://github.com/xiningli/personal-digital-human">open source&nbsp;↗</a></p>
           </div>
         </div>
       </div>
+      <div class="mirror-progress" id="mirror-progress" hidden><span></span></div>
       <div class="mirror-actions">
-        <button class="btn btn-primary" id="shatter" type="button" disabled>Shatter the mirror</button>
+        <button class="btn btn-primary" id="shatter" type="button" disabled>Generate a world</button>
         <span class="mirror-tools">
           <button class="mirror-tool" id="mirror-undo" type="button" disabled>↶&nbsp;Undo</button>
           <button class="mirror-tool" id="mirror-clear" type="button" disabled>×&nbsp;Clear</button>
         </span>
         <span class="mirror-count" id="mirror-count">0 strokes</span>
       </div>
+      <p class="mirror-status" id="mirror-status" role="status"></p>
     </div>
   </section>
 
