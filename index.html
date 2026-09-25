@@ -36,25 +36,33 @@
     <h1 class="reveal">Anthony <em>(Xining)</em> Li</h1>
     <p class="lede reveal">Software engineer in applied machine learning — speech, reinforcement
     learning, and generative models. First author at <b>ALIFE&nbsp;2026</b> on the structural
-    substrate of self-awareness in humanoid robots. Currently building a digital twin that
-    speaks in my own voice and gestures the way I do.</p>
+    substrate of self-awareness in humanoid robots. Currently building a
+    <a href="#live">digital twin</a> that speaks in my own voice and gestures the way I do.</p>
     <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="https://xiningli.ca">Meet my digital human&nbsp;&nbsp;→&nbsp;&nbsp;xiningli.ca</a>
+      <a class="btn btn-primary" href="#live">See the digital human&nbsp;&nbsp;↓</a>
       <a class="btn btn-ghost" href="assets/alife-2026-dreaming-itself.pdf">Read the ALIFE paper</a>
     </div>
   </section>
 
   <!-- ── The digital human, live on Cloudflare ────────── -->
-  <section class="live-card reveal" id="live">
-    <div class="live-inner">
-      <p class="eyebrow light">Now live</p>
+  <section class="live" id="live">
+    <div class="live-figure reveal">
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="assets/digital-human-poster.jpg" width="720" height="960"
+             aria-label="Looping preview of the 3D digital human gesturing while speaking">
+        <source src="assets/digital-human-loop.webm" type="video/webm">
+        <source src="assets/digital-human-loop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="live-text reveal">
+      <p class="status"><span class="status-dot" id="status-dot"></span><span id="status-text">checking…</span></p>
       <h2>The Digital Human</h2>
-      <p>A full-body 3D avatar on <b>xiningli.ca</b> — my cloned voice, gestures imitated from
-      real lectures and TED talks, grounded by a physics balance gate so it never floats or
-      falls. Ask it about the paper, the projects, or the six years behind them.</p>
-      <a class="btn btn-light" href="https://xiningli.ca">Start a conversation&nbsp;↗</a>
-      <p class="live-note">Hosted on Cloudflare&nbsp;·&nbsp;voice &amp; motion pipelines are open source on
-      <a href="https://github.com/xiningli/personal-digital-human">GitHub</a></p>
+      <p>Ask it anything about the paper, the projects, or the six years behind them.
+      It answers in my cloned voice, with gestures learned from real talks — and a physics
+      gate keeps its feet on the ground.</p>
+      <a class="btn btn-primary" href="https://xiningli.ca">Start a conversation&nbsp;↗</a>
+      <p class="live-sub">Voice &amp; motion pipelines are
+      <a href="https://github.com/xiningli/personal-digital-human">open source&nbsp;↗</a></p>
     </div>
   </section>
 
