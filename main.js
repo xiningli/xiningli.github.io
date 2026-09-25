@@ -26,10 +26,3 @@ for (const el of document.querySelectorAll('.reveal')) io.observe(el);
     text.textContent = 'Launching soon · xiningli.ca';
   }
 })();
-
-/* A moving preview is the first thing a reduced-motion visitor asked us not to do. */
-const preview = document.querySelector('.live-figure video');
-if (preview && matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  preview.removeAttribute('autoplay');
-  preview.pause();
-}

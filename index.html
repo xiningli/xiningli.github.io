@@ -39,30 +39,42 @@
     substrate of self-awareness in humanoid robots. Currently building a
     <a href="#live">digital twin</a> that speaks in my own voice and gestures the way I do.</p>
     <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="#live">See the digital human&nbsp;&nbsp;↓</a>
+      <a class="btn btn-primary" href="#live">Break the mirror&nbsp;&nbsp;↓</a>
       <a class="btn btn-ghost" href="assets/alife-2026-dreaming-itself.pdf">Read the ALIFE paper</a>
     </div>
   </section>
 
-  <!-- ── The digital human, live on Cloudflare ────────── -->
+  <!-- ── The mirror: draw, shatter, step through ──────── -->
   <section class="live" id="live">
-    <div class="live-figure reveal">
-      <video autoplay muted loop playsinline preload="metadata"
-             poster="assets/digital-human-poster.jpg" width="720" height="960"
-             aria-label="Looping preview of the 3D digital human gesturing while speaking">
-        <source src="assets/digital-human-loop.webm" type="video/webm">
-        <source src="assets/digital-human-loop.mp4" type="video/mp4">
-      </video>
+    <div class="mirror-head reveal">
+      <p class="eyebrow">A world on the other side</p>
+      <h2>Every line, a doorway.</h2>
+      <p class="mirror-lede">Draw a few lines. Then break the mirror.</p>
     </div>
-    <div class="live-text reveal">
-      <p class="status"><span class="status-dot" id="status-dot"></span><span id="status-text">checking…</span></p>
-      <h2>The Digital Human</h2>
-      <p>Ask it anything about the paper, the projects, or the six years behind them.
-      It answers in my cloned voice, with gestures learned from real talks — and a physics
-      gate keeps its feet on the ground.</p>
-      <a class="btn btn-primary" href="https://xiningli.ca">Start a conversation&nbsp;↗</a>
-      <p class="live-sub">Voice &amp; motion pipelines are
-      <a href="https://github.com/xiningli/personal-digital-human">open source&nbsp;↗</a></p>
+    <div class="mirror-panel reveal">
+      <div class="mirror-stage" id="mirror-stage">
+        <img class="mirror-world" id="mirror-world" alt="The moonlit world revealed behind the broken mirror" draggable="false">
+        <canvas id="mirror-gl" aria-hidden="true"></canvas>
+        <canvas id="mirror-draw" aria-label="Sketch canvas. Draw with a mouse, pen, or finger." tabindex="0"></canvas>
+        <div class="mirror-hint" id="mirror-hint"><span>Draw your first line here</span><small>A line, a curve — anything can open a door.</small></div>
+        <div class="mirror-overlay" id="mirror-overlay" hidden>
+          <div class="mirror-card">
+            <p class="status"><span class="status-dot" id="status-dot"></span><span id="status-text">checking…</span></p>
+            <p class="mirror-card-line">The digital human lives beyond the mirror.</p>
+            <a class="btn btn-primary" href="https://xiningli.ca">Start a conversation&nbsp;↗</a>
+            <p class="live-sub">Voice &amp; motion pipelines are
+            <a href="https://github.com/xiningli/personal-digital-human">open source&nbsp;↗</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="mirror-actions">
+        <button class="btn btn-primary" id="shatter" type="button" disabled>Shatter the mirror</button>
+        <span class="mirror-tools">
+          <button class="mirror-tool" id="mirror-undo" type="button" disabled>↶&nbsp;Undo</button>
+          <button class="mirror-tool" id="mirror-clear" type="button" disabled>×&nbsp;Clear</button>
+        </span>
+        <span class="mirror-count" id="mirror-count">0 strokes</span>
+      </div>
     </div>
   </section>
 
@@ -206,5 +218,6 @@
 </footer>
 
 <script src="main.js"></script>
+<script defer src="assets/mirror.bundle.js"></script>
 </body>
 </html>
